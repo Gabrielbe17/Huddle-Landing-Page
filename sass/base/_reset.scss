@@ -1,0 +1,22 @@
+// General Styles
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+h1,h2,h3{
+    @include heading();
+}
+p,
+li{
+    @include text(400);
+}

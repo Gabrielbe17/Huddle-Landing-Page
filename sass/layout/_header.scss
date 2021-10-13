@@ -1,0 +1,67 @@
+
+// Header Section
+.header{
+
+    background: $palaceCyan url(/images/bg-hero-mobile.svg)  no-repeat;
+
+    nav{
+
+        @include flex(row);
+        padding: 3em 1em;
+        justify-content: space-between;
+        width: 85%;
+        max-width: 95rem;
+        margin: 0 auto;
+
+        @media screen and (max-width:511px) {
+            @include flex(column);
+            gap: 1em;
+        } 
+    }
+    .logo{
+        height: 31px;
+        width: 189px;
+
+        @media screen and (min-width:950px) {
+            height: 40px;
+            width: 240px;
+        }
+    }
+    .hero__heading{
+        color: $darkCyan;
+        width: 100%;
+        @media screen and (min-width:1000px) {
+            text-align: start;
+        }
+    }
+    .hero{
+        @include flex(column);
+        gap: 1.8em;
+        width: 85%;
+        padding: 2em 0 8em 0;
+        margin: 0 auto;
+        text-align: center;
+
+        @media screen and (min-width:1000px) {
+            @include grid();
+            gap: 3em;
+            text-align: start;
+        }
+    
+    }
+    .hero__box{
+        @include flex(column);
+        gap: 1.8em;
+        animation: slideFromLeft .85s ease-in-out;
+
+        @include slideLeft();
+    }
+    .svg{
+        width: 100%;
+        max-width: 40rem;
+        animation: slideFromRight .85s ease-in-out;
+
+        @include slideRight();
+    }
+}
+

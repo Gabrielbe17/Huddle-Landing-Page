@@ -1,0 +1,50 @@
+
+main{
+    
+    padding: 7.5em 1em;
+    background-color: #fff;   
+
+    .card{
+        display: grid;
+        gap: 3em;
+        width: 92%;
+        margin: 0 auto;
+    }
+    .cards{
+        @include cards();
+
+        @media screen and (min-width:1000px) {
+            @include grid();
+            gap: 3em;
+            place-items: center;
+        }
+    }
+    .cards__heading{
+        text-align: center;
+        color: $darkCyan;
+        margin: 2em 0 1em 0;
+        @media screen and (min-width:1100px) {
+            text-align: start;
+        }
+    }
+    .cards__svg{
+        width: 70%;
+        max-width: 25rem;
+
+        @media screen and (min-width:1000px) {
+            order: 2;
+        }
+    }
+    p{
+        text-align: center;
+        color: $grayishBlue;
+        @media screen and (min-width:1000px) {
+            text-align: start;
+        }
+    }
+    .cards__box-m{
+        @media screen and (min-width:1000px) {
+            order: 2;
+        }
+    }
+}

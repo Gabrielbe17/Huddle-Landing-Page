@@ -1,0 +1,63 @@
+
+
+
+// Flex
+@mixin flex ($direction){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+}
+// Cards
+@mixin cards {
+    @include flex(column);
+    box-shadow: $boxShadow; 
+    border-radius: .5em;
+    padding: 4em 3.2em;
+    width: 95%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+// Grid
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+// Active States
+@mixin active {
+    &:hover{
+        opacity: .58;
+    }
+}
+// Fonts
+@mixin text($font-weight){
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $font-weight;
+}
+@mixin heading{
+    font-family: 'Poppins', sans-serif;
+ 
+}
+// Animations
+@mixin slideLeft {
+    @keyframes slideFromLeft {
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+}
+
+@mixin slideRight {
+    @keyframes slideFromRight {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+    }
+}
+
+
