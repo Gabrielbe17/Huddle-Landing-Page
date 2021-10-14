@@ -12,11 +12,13 @@
         width: 85%;
         max-width: 95rem;
         margin: 0 auto;
+        animation: slideFromUp 1.2s ease-in-out;
 
         @media screen and (max-width:511px) {
             @include flex(column);
             gap: 1em;
         } 
+       @include slideUp(); 
     }
     .logo{
         height: 31px;
@@ -53,14 +55,14 @@
     .hero__box{
         @include flex(column);
         gap: 1.8em;
-        animation: slideFromLeft .85s ease-in-out;
+        animation: slideFromLeft 1.25s ease-in-out;
 
         @include slideLeft();
     }
     .svg{
         width: 100%;
         max-width: 40rem;
-        animation: slideFromRight .85s ease-in-out;
+        animation: slideFromRight 1.25s ease-in-out;
 
         @include slideRight();
     }
